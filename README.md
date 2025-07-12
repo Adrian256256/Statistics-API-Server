@@ -41,14 +41,6 @@ Le Stats Sportif is a Python-based multithreaded web server that serves statisti
 | `/api/jobs`                          | GET    | List all job statuses |
 | `/api/num_jobs`                      | GET    | Get count of pending jobs |
 
-## 🚀 Running the Server
-
-Make sure you have Python 3.8+ installed.
-
-```bash
-pip install -r requirements.txt
-python -m <your_main_module>  # Replace with your entrypoint
-```
 
 CSV path should be passed or configured in the `DataIngestor` initialization.
 
@@ -64,23 +56,3 @@ CSV path should be passed or configured in the `DataIngestor` initialization.
 
 All job results are stored as files in the `results/` folder using the `job_id` as the filename.
 
-## 🧪 Example
-
-```bash
-curl -X POST http://localhost:5000/api/global_mean
-# Returns: {"job_id": 3}
-curl http://localhost:5000/api/get_results/3
-# Returns: {"result": 42.7}
-```
-
-## 🛑 Shutdown
-
-To gracefully stop the server:
-
-```bash
-curl -X POST http://localhost:5000/api/graceful_shutdown
-```
-
-## 📄 License
-
-MIT License
